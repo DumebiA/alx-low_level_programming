@@ -3,7 +3,7 @@
 /**
  * main - for main funct
  *
- * Return - always ends with 0
+ * Return: always ends with 0
  */
 
 int main(void)
