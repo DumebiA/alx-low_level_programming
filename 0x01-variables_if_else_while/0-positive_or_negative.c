@@ -2,14 +2,13 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-
+/* betty style doc for function main goes there */
 /**
- * main : Entry function
+ * main - Entry function
  *
  * Return: always ends with 0
  */
 
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
@@ -21,7 +20,8 @@ int main(void)
 		printf("%d is positive", n);
 	else if (n == 0)
 		printf("%d is zero", n);
-	else if (n < 0)
+	else
 		printf("%d is negative", n);
+	printf("\n");
 	return (0);
 }
