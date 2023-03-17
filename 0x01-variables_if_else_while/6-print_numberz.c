@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - main funct
  * Return: always 0
  */
-
 int main(void)
 {
 	int n;
