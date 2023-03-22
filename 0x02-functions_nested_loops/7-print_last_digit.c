@@ -2,17 +2,25 @@
 /**
  * print_last_digit - Main function
  *
- * @m: acts as integar
+ * @n: acts as integar
  *
- * Return: return to n
+ * Return: return to value of i
  */
 
-int print_last_digit(int r)
+int print_last_digit(int n)
 {
-	int n;
+	int i;
 
-	n = r % 10;
-	if (r < 0)
+	if (n < 0)
 		n = -n;
-	return (n);
+
+	i = n % 10;
+
+	if (i < 0)
+		i = -i;
+
+	_putchar(i + '0');
+
+	return (i);
+
 }
