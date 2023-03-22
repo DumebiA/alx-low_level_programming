@@ -3,7 +3,7 @@
 /**
  * main - finds and prints the sum of the even-valued terms
  * followed by a new line
- * Return: Always 0
+ * Return: always 0
  */
 
 int main(void)
@@ -21,7 +21,7 @@ int main(void)
 		{
 			sum = sum + o;
 		}
-		next = o + k;
+		next = o + p;
 		o = p;
 		p = next;
 	}
