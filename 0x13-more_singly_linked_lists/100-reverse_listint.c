@@ -4,26 +4,24 @@
 
 /**
  * reverse_listint - reverses a linked list
- * @head: pointer
+ * @head: pointer to the first node in the list
  *
- * Return: pointer to the first node in the new list
+ * Return: pointer to the first node
  */
 
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *last = NULL;
-	listint_t *pres = *head;
 	listint_t *next = NULL;
 
-	while (pres != NULL)
+	while (*head)
 	{
-		next = pres->next;
-
-		pres->next = last;
-
-		last = pres;
-		pres = next;
+		next = (*head)->next;
+		(*head)->next = last;
+		last = *head;
+		*head = next;
 	}
+
 	*head = last;
 
 	return (*head);
