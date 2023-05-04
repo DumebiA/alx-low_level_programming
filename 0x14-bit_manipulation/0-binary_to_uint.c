@@ -13,9 +13,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int decVal = 0;
 	int n = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-	
+
 	for (n = 0; b[n]; n++)
 	{
 		if (b[n] < '0' || b[n] > '1')
