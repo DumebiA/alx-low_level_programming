@@ -6,9 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *local_buffer(char *filename);
-void close_fildes(int fildes);
-
 /**
  * local_buffer - allocates 1024 bytes.
  * @filename: The name of the file
@@ -91,13 +88,10 @@ int main(int argc, char *argv[])
 
 		x = read(source, buff, 1024);
 		des = open(argv[2], O_WRONLY | O_APPEND);
-	
-	}
-	while (x > 0);
+	} while (x > 0);
 
 	free(buff);
 	close_fildes(source);
 	close_fildes(des);
-
 	return (0);
 }
