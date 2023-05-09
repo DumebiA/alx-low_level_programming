@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char *local_buffer(char *filename);
+void close_fildes(int fildes);
+
 /**
  * local_buffer - allocates 1024 bytes.
  * @filename: The name of the file
