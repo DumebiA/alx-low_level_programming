@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 	buff = local_buffer(argv[2]);
 	source = open(argv[1], O_RDONLY);
 	x = read(source, buff, 1024);
-	des = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	des = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
 
 	do {
 		if (source == -1 || x == -1)
