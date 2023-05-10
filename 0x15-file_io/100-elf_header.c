@@ -54,11 +54,11 @@ void print_magic(unsigned char *filename)
 
 	printf(" Magic: ");
 
-	for (n = 0; n < INIDENT; n++)
+	for (n = 0; n < EI_INIDENT; n++)
 	{
 		printf("%02x", filename[n]);
 
-		if (n == INIDENT - 1)
+		if (n == EI_INIDENT - 1)
 			printf("\n");
 		else
 			printf(" ");
@@ -74,15 +74,15 @@ void print_class(unsigned char *filename)
 {
 	printf(" Class: ");
 
-	switch (filename[CLASS])
+	switch (filename[EI_CLASS])
 	{
-	case CLASS_NONE:
+	case ELFCLASSNONE:
 		printf("none\n");
 		break;
-	case CLASS_32:
+	case ELFCLASS32:
 		printf("ELF32\n");
 		break;
-	case CLASS64:
+	case ELFCLASS64:
 		printf("ELF64\n");
 		break;
 	default:
